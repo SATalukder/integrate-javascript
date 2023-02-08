@@ -24,11 +24,32 @@
             <li>Jalali set</li>
             <li>Masud</li>
             <li>Bonobash</li>
+            <li>DOM de re baba</li>
+        </ul>
+        <ul>
+            <li>Apple</li>
+            <li>Banana</li>
+            <li>Carrot</li>
         </ul>
     </main>
     <script src="js/dom.js"></script>
     <script>
-        console.log('adding JS inside the HTML File');
+        const student = {
+            name: "Abul",
+            id: 11,
+            stydy: function (time) {
+                console.log(time, 'Study Kortase');
+            }
+        }
+        const LiCollection = document.getElementsByTagName('li');
+        // console.log(LiCollection);
+        for (const li of LiCollection) {
+            console.log(li.innerText);
+        }
+        const allHeading = document.getElementsByTagName('h1');
+        for (const h1 of allHeading) {
+            console.log(h1.innerText);
+        }
     </script>
 </body>
 
