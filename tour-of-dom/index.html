@@ -8,8 +8,16 @@
     <title>Tour of DOM</title>
     <link rel="stylesheet" href="styles/style.css">
     <style>
-        li {
+        .fruits-container li {
             color: rgb(124, 163, 46);
+        }
+
+        #fruits-title {
+            color: black;
+        }
+
+        .important-places {
+            color: blueviolet;
         }
     </style>
 </head>
@@ -19,18 +27,35 @@
         <h1>Welcome to my DOM</h1>
     </header>
     <main>
-        <h1>My Awesome DOM de baba</h1>
-        <ul>
-            <li>Jalali set</li>
-            <li>Masud</li>
-            <li>Bonobash</li>
-            <li>DOM de re baba</li>
-        </ul>
-        <ul>
-            <li>Apple</li>
-            <li>Banana</li>
-            <li>Carrot</li>
-        </ul>
+        <section>
+            <h1>My Awesome DOM de baba</h1>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fugiat ducimus eum et commodi deserunt possimus
+                praesentium, nobis fugit dolorum exercitationem, vero dolorem ratione libero suscipit repudiandae
+                impedit eaque nesciunt ipsa.</p>
+            <ul>
+                <li>Jalali set</li>
+                <li>Masud</li>
+                <li>Bonobash</li>
+                <li>DOM de re baba</li>
+            </ul>
+        </section>
+        <section class="fruits-container">
+            <h1 id="fruits-title">Fruits I Like</h1>
+            <ul>
+                <li>Apple</li>
+                <li>Banana</li>
+                <li>Carrot</li>
+            </ul>
+        </section>
+        <section>
+            <h1 id="places-title">Places I like to Visit</h1>
+            <ul>
+                <li class="important-places">Sundorbon</li>
+                <li class="important-places">Bandorbon</li>
+                <li class="important-places">Katabon</li>
+                <li>Shalbon</li>
+            </ul>
+        </section>
     </main>
     <script src="js/dom.js"></script>
     <script>
@@ -38,18 +63,41 @@
             name: "Abul",
             id: 11,
             stydy: function (time) {
-                console.log(time, 'Study Kortase');
+                // console.log(time, 'Study Kortase');
             }
         }
+        //option-1: getElementrByTagName "Not always Use"
         const LiCollection = document.getElementsByTagName('li');
         // console.log(LiCollection);
         for (const li of LiCollection) {
-            console.log(li.innerText);
+            // console.log(li.innerText);
         }
         const allHeading = document.getElementsByTagName('h1');
         for (const h1 of allHeading) {
-            console.log(h1.innerText);
+            // console.log(h1.innerText);
         }
+        //Option-2:getElementById 'Use Many time'
+
+        const placesTitle = document.getElementById('places-title');
+        // console.log(placesTitle);
+
+        //Option-3:getElementsByClassName 'almost Use'
+
+        const places = document.getElementsByClassName('important-places');
+        for (const place of places) {
+            // console.log(place.innerText);
+        }
+
+        //Option-4:querySelector
+        //will return the First One
+        //Option-5:querySelectorAll
+
+        const someLi = document.querySelectorAll('.fruits-container li');
+        // console.log(someLi);
+        for (const li of someLi) {
+            console.log(li.innerText);
+        }
+
     </script>
 </body>
 
