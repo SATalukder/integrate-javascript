@@ -20,7 +20,21 @@
     <!-- option 3 -->
     <button id="make-blue">Make blue</button>
     <button id="make-purple">Make Purple</button>
+    <!-- Option 4: -->
+    <button id="make-pink">Make pink</button>
+
+    <button id="make-green">Make Green</button>
     <script src="js/events.js"></script>
+
+    <script>
+        const greenButton = document.getElementById('make-green');
+        // console.log(pinkButton);  
+        greenButton.addEventListener('click', function makegreen() {
+            document.body.style.backgroundColor = 'green';
+        });
+
+
+    </script>
 
 </body>
 

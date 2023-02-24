@@ -1,9 +1,13 @@
 
 //option 1: directly set on the HTML elements
 
+//<button onclick="console.log(65)"> Another button</button>
+
 console.log('This is separate JS file');
 
-//option 2 :add onclike function
+//option 2 :add onclike function on the Html Elements
+
+//<button onclick="redMake()">Make Red</button>
 
 function redMake() {
     document.body.style.backgroundColor = 'red';
@@ -27,4 +31,12 @@ const makepurpleButton = document.getElementById('make-purple');
 makepurpleButton.onclick = function purpleMake() {
     document.body.style.backgroundColor = 'purple';
 
+}
+
+//option 4:
+const pinkButton = document.getElementById('make-pink');
+// console.log(pinkButton);
+pinkButton.addEventListener('click', makePink);
+function makePink() {
+    document.body.style.backgroundColor = 'pink';
 }
